@@ -3,7 +3,10 @@ const app = express()
 const redis= require("redis")
 const port = 3000
 
-const clientDB= redis.createClient()
+const clientDB= redis.createClient({
+    host:'redis-server',
+    port:6379
+})
 clientDB.set('visits',10)
 
 
