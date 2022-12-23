@@ -18,6 +18,6 @@ services:
     build: ./nginx
     ports:
       - '80:80'
-    depends_on:
+    depends_on:  
       - web1
       - web2
